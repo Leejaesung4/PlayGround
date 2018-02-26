@@ -1,0 +1,310 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+/* 웹폰트 
+1. 사용자서체(나눔고딕,나눔바른고딕,구글본고딕,기타 사용자서체)를 사용할수있음
+2. 구글웹폰트 검색-구글웹폰트(영문서체), earlyaccess(동양서체)
+3. @import로 링크시 css파일 가장 상단에 연결코드 삽입
+4. @import url(파일링크경로/파일명.css);
+5. font-family:'Nanum Gothic'처럼 구글페이지에 있는 폰트명 사용
+6. 폰트에 따라 제공되는 font-weight이 다름(2가지에서 6가지까지 있음)
+7. font-weight:400이 font-weight:normal(보통굵기)임
+*/
+
+body,button,input,textarea,select,table {font-family:'Nanum Gothic','맑은 고딕','malgun gothic','돋움',dotum,sans-serif; font-size:12px;}
+body {min-width:1000px; position:relative;}
+/*화살표빼기*/
+select {-webkit-appearance:none; -moz-appearance:none; appearance:none;}
+select::-ms-expand {display:none;}
+/*h1 {font-size:100px;}
+h2 {font-size:100px; font-weight:700;}
+h3 {font-size:100px; font-weight:800;}
+h4 {font-size:100px; font-family:'맑은 고딕','malgun gothic',sans-serif;}*/
+
+#popup {height:90px; background:url(../images/jaF0UR2PJ1wMApNL_20170529.jpg) no-repeat center top; position:relative;}
+#popup a { display:block; height:90px;}
+
+/* 팝업닫기버튼 */
+#popup .btn_close {position:absolute; left:50%; top:10px; background:url(../images/btn_top_banner_close.png) no-repeat; width:19px; height:19px; border:none; text-indent:-9999px; margin-left:481px;}
+
+/* 팝업이 사라지거나 높이가 0으로 애니메이트되었을때
+아래쪽 내용이 자동으로 올라가도록 하기위해 header의 기준을 빈엘리먼트인
+header_wrap으로 설정해줌
+*/
+#header_wrap {position:relative;}
+
+#header_wrap h1 {position:absolute; left:50%; top:25px; z-index:100; margin-left:-50px;}
+
+/* 370->103으로 header높이 바뀜 */
+#header {width:100%; height:103px; background:url(../images/header_bg.png) repeat-x; position:absolute; left:0; top:0; overflow:hidden;}
+
+#header .header_inner {width:1000px; height:103px; margin:0 auto;}
+
+#header .header_inner .util {float:right; margin-top:15px;}
+#header .header_inner .util li {float:left; margin-left:10px;}
+#header .header_inner .util li a {color:#a2a1a2; font-weight:700; display:block; line-height:23px; padding:0 10px; text-align:center;}
+#header .header_inner .util li a:hover {color:#FFF;}
+
+#header .header_inner .util .util3 a {width:63px; padding:0; color:#333;background:url(../images/util_aca_bg.png) no-repeat;}
+#header .header_inner .util .util3 a:hover {color:#333;}
+
+#header .header_inner .util .util4 a {width:112px; padding:0; color:#FFF;background:url(../images/util_app_bg.png) no-repeat;}
+
+/* gnb */
+#header .header_inner .gnb {clear:right; padding-top:13px;}
+#header .header_inner .gnb>li {float:left; background:url(../images/gnb_line.gif) no-repeat left 19px;}
+
+/* 첫번째 메뉴 배경빼기*/
+#header .header_inner .gnb>li:first-child {background:none;}
+#header .header_inner .gnb>li>a {
+	color:#FFF;
+	font-size:16px;
+	font-weight:700;
+	display:block;
+	line-height:50px;
+	text-align:center;
+	padding:0 25px;
+}
+#header .header_inner .gnb>li:hover>a {color:#8b4db3;}
+
+/* 커뮤니티 메뉴 오른쪽 이동*/
+#header .header_inner .gnb .gnb5 {margin-left:95px;}
+
+#header .header_inner .gnb .depth2 {text-align:center; margin-top:20px;}
+#header .header_inner .gnb .depth2 li {margin-bottom:10px;}
+#header .header_inner .gnb .depth2 a {color:#CCC; display:block; font-size:13px;}
+#header .header_inner .gnb .depth2 a:hover {background:#6CC; color:#333;}
+
+
+#main .btn_go {position:fixed; right:0; top:100px; z-index:200;}
+
+#main_visual {height:620px; background:url(../images/sMkbYCLarlo0f7Ow_20160204.jpg) no-repeat center top;}
+
+#section1 {width:1000px; overflow:hidden; margin:0 auto; padding:50px 0;}
+#section1 .story {width:270px; float:left; text-align:center;}
+#section1 .story h2 {font-size:30px; color:#3f3f3f; font-weight:700;}
+#section1 .story p { color:#4c4a4b; font-size:14px; margin-bottom:10px;}
+
+#section1 .member {float:left;}
+
+/* New & best*/
+#section2 {background:#CCC;}
+#section2 .section2_inner {width:1000px; margin:0 auto; padding:40px 0 80px 0; overflow:hidden;}
+#section2 .section2_inner h2 {font-size:40px; color:#4c4a4b; text-align:center; font-weight:700; background:url(../images/main_menu_title_line.png) no-repeat left center; margin-bottom:30px;}
+#section2 .section2_inner h2 span {font-weight:400;}
+
+#section2 .section2_inner .best {float:left; background:url(../images/main_menu_best_bg.png) no-repeat;}
+
+#section2 .section2_inner .product {float:right; width:430px;}
+
+/* li에 미리 선을 넣어놓고 호버시 색만 변경 */
+#section2 .section2_inner .product li {float:left; background:#FFF; width:195px; text-align:center; margin:0 0 10px 10px; position:relative; border:5px solid white;}
+
+/* a태그 블럭처리 안하면 내용만큼만 클릭됨 */
+#section2 .section2_inner .product a {display:block; padding-bottom:10px;}
+
+/* 호버시 선색 변경*/
+#section2 .section2_inner .product li:hover {border-color:#ffb414;}
+
+/* 상품이미지 가로길이 변경(가로 줄이면 세로는 자동) */
+#section2 .section2_inner .product .product_img {width:179px;}
+
+#section2 .section2_inner .product h3 {font-size:15px; color:#4c4a4b; font-weight:700;}
+#section2 .section2_inner .product h4 {font-size:14px; color:#777777;}
+
+#section2 .section2_inner .product .icon_best {position:absolute; right:10px; top:10px;}
+
+/* 블랙스위트 배너*/
+#section3 {background:#423333;}
+#section3 .section3_inner {width:1000px; height:216px; margin:0 auto; position:relative;}
+#section3 .section3_inner h2 {font-size:32px; color:#FFF; padding-top:40px;}
+#section3 .section3_inner h2 strong {font-weight:700;}
+
+#section3 .section3_inner p {font-size:14px; color:#949494; margin-top:10px;}
+
+#section3 .section3_inner .btn_view {background:#1d1a1a; display:inline-block; padding:3px 10px; color:#CCC; margin-top:30px;}
+
+#section3 .section3_inner .banner_img {position:absolute; right:0; bottom:0;}
+
+/* 사회공헌*/
+#section4 {width:1000px; margin:0 auto; overflow:hidden; padding:70px 0;}
+
+#section4 .slider {float:left;}
+
+#section4 .box_wrap {float:left; width:271px;}
+#section4 .box_wrap .box {background:#6c5648 url(../images/btn_main_article_type1.png) no-repeat 90% 30px;}
+#section4 .box_wrap .box a {display:block; height:169px; padding:36px 0 0 30px;}
+#section4 .box_wrap .box h3 {font-size:26px; color:#FFF; font-weight:700;}
+#section4 .box_wrap .box p {font-size:14px; color:#c6c6c6; margin-top:20px;}
+
+#section4 .box_wrap .recruit {background:#CCC url(../images/btn_main_article_type2.png) no-repeat 90% 30px;}
+#section4 .box_wrap .recruit h3 {color:#000;}
+#section4 .box_wrap .recruit p {color:#000;}
+
+#section4 .box_wrap2 {width:auto; position:relative;}
+#section4 .box_wrap2 .box {position:absolute; right:0; bottom:0; width:251px; background:#424242 url(../images/btn_main_article_type2.png) no-repeat 90% 30px;}
+
+/* 탭메뉴 */
+#section5 {background:#CCC;}
+#section5 .section5_inner {width:1000px; padding:50px 0; margin:0 auto;}
+
+#section5 .section5_inner .btn_tab {border-bottom:2px solid #333;; height:52px;}
+#section5 .section5_inner .btn_tab li {float:left; border:2px solid #999; border-bottom:none;}
+#section5 .section5_inner .btn_tab li button {width:240px; height:50px; border:none; background:none; font-size:17px; font-weight:700;}
+
+/* 두번째리스트 왼쪽으로 음수이동시켜 겹쳐줌*/
+#section5 .section5_inner .btn_tab .btn_tab2 .btn_tab3{margin-left:-2px;}
+
+/* 탭메뉴 on클래스 처리 
+li.on은 .on으로 축약가능하나 li태그에 on클래스라는걸 명시적으로 알려주는 의미
+
+position:relative; 는 제자리 띄우기 용도로도 사용됨
+*/
+#section5 .section5_inner .btn_tab li.on { border-color:#333; position:relative; background-color:#f1f1f1; height:52px;}
+
+/* 탭내용(페이스북, 인스타) */
+
+#section5 .section5_inner .sns_wrap {margin-top:30px;}
+#section5 .section5_inner .sns_wrap .sns {overflow:hidden;}
+#section5 .section5_inner .sns_wrap .sns li {float:left; background:#FFF; width:235px; height:335px; margin-left:20px;}
+#section5 .section5_inner .sns_wrap .sns li:first-child {margin-left:0;}
+
+/* 두번째 탭내용 보이지않게*/
+#section5 .section5_inner .sns_wrap .sns2 {display:none;}
+#section5 .section5_inner .sns_wrap .sns3 {display:none;}
+#section5 .section5_inner .sns_wrap .sns4 {display:none;}
+/************************new&best 페이지**************************/
+#sub_visual {height:370px; background:url(../images/sub_top_visual_menu.jpg) no-repeat center top;}
+#sub_visual h2 {font-size:54px; color:#FFF; font-weight:700; text-align:center; padding-top:200px;}
+
+/* 서브페이지 내용*/
+#container {width:1000px; overflow:hidden; margin:0 auto; padding:60px 0 100px 0;}
+#container .lnb_wrap {float:left;}
+
+#container .lnb li {background:#CCC; width:100px; margin-bottom:10px;}
+#container .lnb li a {display:block; line-height:100px; text-align:center; font-size:15px; font-weight:700; color:#333;}
+
+/* 두줄인경우 각줄에 줄간격이 적용되므로 줄이고 패딩처리 */
+#container .lnb .lnb2 a {line-height:20px; padding:30px 0;}
+
+/* 첫번째 메뉴 on처리*/
+#container .lnb li.on {background:#000;}
+#container .lnb li.on a {color:#CCC;}
+
+#container .content {float:right; width:850px;}
+
+#container .content .location_wrap {position:relative;}
+#container .content .location_wrap h2 {font-size:36px; color:#333; font-weight:700; border-bottom:2px solid #333;}
+#container .content .location_wrap .location {position:absolute; right:0; top:28px; color:#999;}
+#container .content .location_wrap .location a {color:#999;}
+
+/* 화살표 좌우 간격, 현재페이지 볼드처리*/
+#container .content .location_wrap .location span {margin:0 3px;}
+#container .content .location_wrap .location strong {font-weight:700; color:#000;}
+
+#container .content .btn_tab {margin-top:50px; overflow:hidden;}
+#container .content .btn_tab li {float:left; width:50%;}
+#container .content .btn_tab li a {display:block; text-align:center; line-height:40px; background:#069; color:#2b2b2b; font-weight:700; background:#efefef; font-size:13px;}
+#container .content .btn_tab li.on a {background-color:#692c90; color:#FFF;}
+
+/* box-sizing속성
+모든엘리먼트의 box-sizing:content-box;이며, 폼요소 일부는 box-sizing:border-box이다
+box-sizing:content-box는 border, padding이 기존크기에 더해지며
+box-sizing:border-box는 border, padding이 기존크기안에 포함이됨, 즉 늘어나지않음
+*/
+#container .box {height:50px; background:#0CC; width:850px; padding:50px; box-sizing:border-box;}
+
+/* 신상품 select */
+#container .content .top_content {background:#CCC; padding:15px 30px; overflow:hidden; margin-top:40px;}
+#container .content .top_content p {float:left; color:#404040; font-size:14px; color:#000; font-weight:700; margin-top:7px;}
+
+#container .content .top_content .select_wrap {float:right;}
+.top_content .select_wrap select {width:275px; /*height:35px;*/ padding:9px 0 9px 10px; color:#706e6f; border:1px solid #e2e2e2; font-size:14px; padding-left:10px; outline:none;}
+/*select 화살표빼기
+-webkit-appearance:none; -> 벤더프리픽스(제조사접두어)를 통해 각 브라우져 제조사 별로 적어야함, 구글크롬, 사파리브라우져
+-moz-appearance:none; -->모질라 파이어폭스
+appearance:none; -->w3w표준속성을 마지막에 적어줌
+*/
+select::-ms-expand {display:none;}/*익스전용속성*/
+.top_content .select_wrap button {background:#3e3e3e; height:35px; border:none; color:#CCC; font-size:13px;}
+
+.bottom_content a {background:url(../images/kljFw3dDY4LSAotv_20170501.jpg) no-repeat; width:840px; height:1186px; float:left; margin-top:40px;}
+
+/************************************ 새소식 *************************************************/
+/* 두번째 서브페이지부터 유니크한 파일명을 
+main에 추가해준후 추가한 클래스를 무조건 앞에 붙여서 사용한다
+*/
+.notice #sub_visual {height:370px; background:url(../images/sub_top_visual_community.jpg) no-repeat center top;}
+.notice .content .board {margin-top:40px; border-top:3px solid #0552a9;} 
+
+/* 테이블
+1.display:table이며 블럭과 유사하지만 가로가 내용만큼임
+2. 처음은 내용만큼 작으므로 width:100%로 늘려야함
+3. caption태그로 테이블제목을 달아주고 초기화 css에서 포지션으로 위로 올려 보이지 않게 함
+4. caption이 올라가면 table상단이 위로 같이 올라가므로 선이 일부 안나옴
+5. 왼쪽 선처리시 div로 처리
+6. tr에서 선처리시 ie7에선 안나옴
+7. 선처리는 th,tb에서 각자해줌
+8. th는 text-align:center가 기본값
+9. 
+*/
+.notice .content .board table {width:100%; }
+.notice .content .board table th {border-bottom:1px solid #333; padding:13px 0; font-size:16px;}
+.notice .content .board table td {border-bottom:1px solid #999; padding:10px 0; font-size:14px; text-align:center;}
+.notice .content .board table td.left_td {text-align:left;}
+.notice .content .board table td.left_td a {color:#000; font-weight:700;}
+.notice .content .board table td.left_td a:hover {text-decoration:underline; color:#692c90;}
+.notice .content .board table tfoot tr {background-color:#999;}
+/*vertical-align:middle; 테이블안에서는 세로정렬로 동작함*/
+.notice .content .board table tfoot td {padding:0; height:100px; vertical-align:middle;}
+
+
+.notice .content .board .btn_page {margin-top:20px; text-align:center;}
+.notice .content .board .btn_page a, .notice .content .board .btn_page span {display:inline-block; width:30px; height:30px; text-align:center; line-height:30px; font-size:13px; font-weight:700; color:#333;}
+.notice .content .board .btn_page span.on {background:#3475d0; varder:1px solid #2475d0;color:#fff;}
+.notice .content .board .btn_page a:hover {background:#3475d0; color:#FFF; border-color:#06c; text-decoration:underline; }
+
+
+
+#main #container .content .login_wrap {border:10px solid #f0f0f0; margin-top:50px; overflow:hidden;}
+#main #container .content .login_wrap .login_inner {width:400px; margin:0 auto;}
+#main #container .content .login_wrap .login_inner .login_box {width:263px; float:left;}
+#main #container .content .login_wrap .login_inner .login_box p {display:inline-block;}
+#main #container .content .login_wrap .login_inner .login_box p lable {color:#404040; width:71px; height:35px; line-height:35px;}
+#main #container .content .login_wrap .login_inner .login_box2 {float:left;  display:block; width:120px; height: 84px; vertical-align:middle; background-color: #692c90;
+font-size:16px; color:#fff;}
+
+
+
+
+/* 푸터 */
+#footer {height:118px; background:#444;}
+#footer .footer_inner {width:1000px; height:118px; margin:0 auto;}
+
+#footer .footer_inner h2 {float:left; margin-top:30px;}
+
+#footer .footer_inner .menu_wrap {float:left; margin:30px 0 0 20px;}
+
+#footer .footer_inner .menu_wrap .footer_menu li {float:left; margin-right:20px;}
+#footer .footer_inner .menu_wrap .footer_menu li a { color:#FFF; font-size:14px; font-weight:700; line-height:23px; display:block; text-align:center;}
+
+#footer .footer_inner .menu_wrap .footer_menu .footer_menu1 {margin-right:10px;}
+#footer .footer_inner .menu_wrap .footer_menu .footer_menu1 a {background:url(../images/ft_menu2_1.png) no-repeat; width:112px;}
+#footer .footer_inner .menu_wrap .footer_menu .footer_menu2 {margin-right:10px;}
+#footer .footer_inner .menu_wrap .footer_menu .footer_menu2 a {background:url(../images/ft_menu2_2.png) no-repeat; width:108px;}
+#footer .footer_inner .menu_wrap .footer_menu .footer_menu3 a {background:url(../images/ft_menu2_3.png) no-repeat; width:82px;}
+
+/* 푸터 주소,카피라잇*/
+#footer .footer_inner .menu_wrap address {clear:both; color:#adadad; padding-top:10px;}
+
+#footer .footer_inner .icon_menu {float:right; margin-top:20px; position:relative;}
+#footer .footer_inner .icon_menu a {margin-left:6px;}
+#footer .footer_inner .icon_menu .icon_menu3 {position:absolute; right:0; top:40px;}
+
+
+
+
+
+
+
+

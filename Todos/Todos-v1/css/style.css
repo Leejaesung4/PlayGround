@@ -1,0 +1,28 @@
+@charset "utf-8";
+@import "normalize.css";
+@import "reset.css";
+#box {
+  box-sizing: border-box;
+  width: px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+#textput {
+  display: block;
+  border: none;
+  width: 900px;
+  height: 80px;
+  margin: 0 auto;
+  font-size: 50px;
+}
+
+#list {
+  width: 800px;
+  margin: 0 auto;
+  font-size: 50px;
+}
+
+#list li:hover {
+  text-decoration: line-through;
+}

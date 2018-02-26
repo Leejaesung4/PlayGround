@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200">
+<title>제이쿼리_슬라이더[커핀그루나루]</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+ $(document).ready(function() {
+	 //상단팝업 닫기
+	$('#popup .btn_close').click(function() {
+        $('#popup').slideUp();
+    });
+	
+	//sns탭메뉴
+	$('.btn_tab li').click(function() {
+        var num = $(this).index();
+		
+		//클릭한 li에 동적으로 on클래스를 걸고 형제요소는 on 클레스 삭제
+		$(this).addClass('on').siblings().removeClass('on');
+		//$('.sns_wrap .sns').hide();
+		//$('.sns_wrap .sns').eq(num).show();
+		
+		//sns 그룹중 탭버튼의 인덱스와 같은 요소를 보여주고 
+		//해당요소의 형제요소는 보이지않게함
+		$('.sns_wrap .sns').eq(num).show().siblings().hide();	  
+    });
+});
+</script>
+</head>
+
+<body>
+<div id="popup">
+	<a href="#"></a>
+    <button class="btn_close" type="button">팝업닫기버튼</button>
+</div>
+<div id="header_wrap">
+	<!--로고를 헤더에 넣을경우 히든때문에 가려지므로 바깥쪽에 배치-->
+	<h1><a href="index.html"><img src="images/logo.png" alt="커핀그루나루"></a></h1>
+    <div id="header">
+    	<div class="header_inner">
+        	<ul class="util">
+            	<li><a href="login.html">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li class="util3"><a href="#">아카데미</a></li>
+                <li class="util4"><a href="#">커핀그루나루 APP</a></li>
+            </ul>
+            <ul class="gnb">
+            	<li>
+                	<a href="newandbest.html">MENU</a>
+                    <ul class="depth2">
+                    	<li><a href="#">매장찾기</a></li>
+                        <li><a href="#">매장찾기</a></li>
+                    </ul>
+                </li>
+                <li>
+                	<a href="#">STORE</a>
+                    <ul class="depth2">
+                    	<li><a href="#">매장찾기</a></li>
+                        <li><a href="#">매장찾기</a></li>
+                        	<li><a href="newandbest.html">New &amp; Best</a></li>
+                        <li><a href="#">New &amp; Best</a></li>
+                        <li><a href="#">New &amp; Best</a></li>
+                        <li><a href="#">New &amp; Best</a></li>
+                        <li><a href="#">New &amp; Best</a></li>
+                        <li><a href="#">New &amp; Best</a></li>
+                        <li><a href="#">New &amp; Best</a></li>
+                    </ul>
+                </li>
+                <li>
+                	<a href="#">EVENT</a>
+                    <ul class="depth2">
+                    	<li><a href="#">진행중인 이벤트</a></li>
+                        <li><a href="#">진행중인 이벤트</a></li>
+                        <li><a href="#">진행중인 이벤트</a></li>
+                    </ul>
+                </li>
+                <li>
+                	<a href="#">MEMBERSHIP</a>
+                    <ul class="depth2">
+                    	<li><a href="#">퍼플 멤버스 소개</a></li>
+                        <li><a href="#">퍼플 멤버스 충전형<br>/기프트카드</a></li>
+                        <li><a href="#">퍼플 멤버스 소개</a></li>
+                        <li><a href="#">퍼플 멤버스 소개</a></li>
+                    </ul>
+                </li>
+                <li class="gnb5">
+                	<a href="notice.html">COMMUNITY</a>
+                    <ul class="depth2">
+                    	<li><a href="notice.html">새소식</a></li>
+                        <li><a href="notice.html">새소식</a></li>
+                        <li><a href="notice.html">새소식</a></li>
+                    </ul>
+                </li>
+                <li>
+                	<a href="#">FRANCHISE</a>
+                    <ul class="depth2">
+                    	<li><a href="#">가맹안내</a></li>
+                        <li><a href="#">가맹안내</a></li>
+                        <li><a href="#">가맹안내</a></li>
+                        <li><a href="#">가맹안내</a></li>
+                        <li><a href="#">가맹안내</a></li>
+                        <li><a href="#">가맹안내</a></li>
+                        <li><a href="#">가맹안내</a></li>
+                        <li><a href="#">가맹안내</a></li>
+                    </ul>
+                </li>
+                <li>
+                	<a href="#">COFFINE STORY</a>
+                    <ul class="depth2">
+                    	<li><a href="#">커핀그루나루 소개</a></li>
+                        <li><a href="#">커핀그루나루 소개</a></li>
+                        <li><a href="#">커핀그루나루 소개</a></li>
+                        <li><a href="#">커핀그루나루 소개</a></li>
+                        <li><a href="#">커핀그루나루 소개</a></li>
+                        <li><a href="#">커핀그루나루 소개</a></li>
+                        <li><a href="#">커핀그루나루 소개</a></li>
+                        <li><a href="#">커핀그루나루 소개</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="main">
+	<a class="btn_go" href="#"><img src="images/btn_franchise_go.gif" alt="FRANCHISE GO"></a>
+	<div id="main_visual">
+    
+    </div>
+    <div id="section1">
+    	<div class="story">
+        	<h2>Coffine Story</h2>
+            <p>커핀그루나루의 이야기입니다.</p>
+            <a href="#"><img src="images/btn_main_intro_go.gif" alt=""></a>
+            <img src="images/main_intro_img1.jpg" alt="">
+        </div>
+        <div class="member">
+        	<a href="#"><img src="images/mnUo8ZWBcivL4sIg_20160126.png" alt=""></a>
+        </div>
+        <div class="story">
+        	<h2>Store Search</h2>
+            <p>가까운 커핀그루나루를 만나보세요.</p>
+            <a href="#"><img src="images/btn_main_intro_go.gif" alt=""></a>
+            <img src="images/main_intro_img2.jpg" alt="">
+        </div>
+    </div>
+    <div id="section2">
+    	<div class="section2_inner">
+        	<h2>NEW <span>&amp;</span> BEST</h2>
+            <div class="best">
+            	<a href="#"><img src="images/A5hfEBtSKR9TzJ7O_20160122.png" alt=""></a>
+            </div>
+            <ul class="product">
+            	<li>
+                	<a href="#">
+                    	<img class="product_img" src="images/83oCue6xZDWJ2PsY_20170508.png" alt="">
+                        <h3>더블자바칩블랜디드</h3>
+                        <h4>Double Javachip Blended</h4>
+                        <img class="icon_best" src="images/main_menu_ico_new.png" alt="">
+                    </a>
+                </li>
+                <li>
+                	<a href="#">
+                    	<img class="product_img" src="images/CJmEjI23t0gLrNT5_20160825.png" alt="">
+                        <h3>스트로베리스무디</h3>
+                        <h4>Strawberry Smoothie</h4>
+                        <img class="icon_best" src="images/main_menu_ico_best.png" alt="">
+                    </a>
+                </li>
+                <li>
+                	<a href="#">
+                    	<img class="product_img" src="images/rHCYxvOKAUp7dmJZ_20170427.png" alt="">
+                        <h3>퐁퐁 블랜디드</h3>
+                        <h4>Pong Pong Blended</h4>
+                        <img class="icon_best" src="images/main_menu_ico_best.png" alt="">
+                    </a>
+                </li>
+                <li>
+                	<a href="#">
+                    	<img class="product_img" src="images/xURoFe3mQvsShE80_20160120.png" alt="">
+                        <h3>레드 와인 소다</h3>
+                        <h4>Red Wine Soda</h4>
+                        <img class="icon_best" src="images/main_menu_ico_best.png" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="section3">
+    	<div class="section3_inner">
+        	<h2>프리미엄 액상 <strong>블랙 / 스위트</strong></h2>
+            <p>원두추출액을 90%사용하여 진한 커피의 향과 맛을 담았습니다.</p>
+            <a class="btn_view" href="#">VIEW MORE <span>&gt;</span></a>
+            <img class="banner_img" src="images/main_menu_banner_img.png" alt="">
+        </div>
+    </div>
+    <div id="section4">
+    	<div class="slider">
+        	<a href="#"><img src="images/CaYidjnEzb5qtJMk_20160126.jpg" alt=""></a>
+        </div>
+        <div class="box_wrap">
+        	<div class="box">
+            	<a href="#">
+                    <h3>사회공헌</h3>
+                    <p>커핀그루나루는 지역사회에<br>이바지하는<br>사회적 책임을 수행합니다.</p>
+                </a>
+            </div>
+            <div class="box recruit">
+            	<a href="#">
+                    <h3>RECRUIT</h3>
+                    <p>당신의 꿈과 열정을<br>커핀그루나루와 함께 마음껏 펼치세요</p>
+                </a>
+            </div>
+        </div>
+        <div class="box_wrap box_wrap2">
+        	<img src="images/main_article_section3.jpg" alt="">
+        	<div class="box">
+            	<a href="#">
+                    <h3>사회공헌</h3>
+                    <p>커핀그루나루는 지역사회에<br>이바지하는<br>사회적 책임을 수행합니다.</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="section5">
+    	<div class="section5_inner">
+        	<ul class="btn_tab">
+            	<li class="on"><button type="button">FACE BOOK</button></li>
+                <li class="btn_tab2"><button type="button">INSTAGRAM</button></li>
+                <li class="btn_tab2"><button type="button">TWEETER</button></li>
+            </ul>
+            <div class="sns_wrap">
+            	<ul class="sns">
+                	<li><a href="#">페이스북게시물1</a></li>
+                    <li><a href="#">페이스북게시물2</a></li>
+                    <li><a href="#">페이스북게시물3</a></li>
+                    <li><a href="#">페이스북게시물4</a></li>
+                </ul>
+                <ul class="sns sns2">
+                	<li><a href="#">인스타게시물1</a></li>
+                    <li><a href="#">인스타게시물2</a></li>
+                    <li><a href="#">인스타게시물3</a></li>
+                    <li><a href="#">인스타게시물4</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer">
+	<div class="footer_inner">
+    	<h2><img src="images/ft_logo.gif" alt="커핀그루나루"></h2>
+        <div class="menu_wrap">
+        	<ul class="footer_menu">
+            	<li><a href="#">마케팅 제휴문의</a></li>
+                <li><a href="#">원ㆍ부자재 문의</a></li>
+                <li><a href="#">개인정보취급방침</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li class="footer_menu1"><a href="#">찾아오시는 길</a></li>
+                <li class="footer_menu2"><a href="#">신규입점제안</a></li>
+                <li class="footer_menu3"><a href="#">전체메뉴</a></li>
+            </ul>
+            <address>사업자등록번호 215-87-06529 서울시 송파구 양재대로 71길 1-20 대표자 김은희    고객센터 02-2202-0791 FAX 02-2202-0807<br>COPYRIGHT© 2016 COFFINE GURUNARU ALL RIGHTS RESERVED</address>
+        </div>
+        <div class="icon_menu">
+        	<a href="#"><img src="images/ft_sns_facebook.png" alt=""></a>
+            <a href="#"><img src="images/ft_sns_instagram.png" alt=""></a>
+            <a class="icon_menu3" href="#"><img src="images/ft_speaker.png" alt=""></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

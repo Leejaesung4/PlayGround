@@ -1,0 +1,21 @@
+@charset "utf-8";
+.btn-area {
+  background: yellow;
+}
+
+.btn-prev,
+.btn-next {
+  display: inline-block;
+  width: 20px;
+  height: 0;
+  padding-top: 20px;
+  overflow: hidden;
+  background: pink url("images/backpage_forwardpage.png") no-repeat;
+  cursor: pointer;
+}
+
+.btn-prev {}
+
+.btn-next {
+  background-position: -40px 0;
+}
